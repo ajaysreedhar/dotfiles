@@ -1,0 +1,22 @@
+# ZSH interactive shell configuration for root user.
+# Author: Ajay Sreedhar
+# Created on: Saturday 05 August 2023
+#
+# The following lines are manually copied from /home/ajay/.zshrc
+HISTFILE=~/.zsh_history
+HISTSIZE=5000
+SAVEHIST=10000
+bindkey -v
+# End of lines copied from /home/ajay/.zshrc
+
+# Modify command prompt style.
+PROMPT="%F{231}%K{166}[%n]%k%K{130} %7~ %k%B%K{124} # %k%b%f "
+
+# Alias 'ls' command to use color palette.
+alias ls="ls --color=auto"
+alias gedit='gnome-text-editor'
+
+# Package manager alias list.
+alias pkg-update='apt-get update'
+alias pkg-upgrade='apt-get upgrade'
+

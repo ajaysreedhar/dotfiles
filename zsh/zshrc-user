@@ -1,0 +1,29 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.zsh_history
+HISTSIZE=5000
+SAVEHIST=10000
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/ajay/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# The following lines are manually added.
+# Author - Ajay Sreedhar
+
+# Modify command prompt style.
+PROMPT="%F{231}%K{060}[%n]%k%K{061} %7~ %k%K{057} $ %k%f "
+
+# Command alias list.
+alias ls='ls --color=auto'
+alias lsgrep='ls -alh | grep -i'
+alias gedit='gnome-text-editor'
+
+# Package manager alias list.
+alias fpx-install='flatpak --installation=extras install flathub'
+alias apt-update='sudo apt-get update'
+alias apt-upgrade='sudo apt-get upgrade'
+
