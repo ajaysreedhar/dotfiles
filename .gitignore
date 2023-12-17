@@ -1,1 +1,7 @@
+# Logs and backup files
+*.log
+*.bak
+*.old
+
+# Ulauncher theme generated files
 generated.css
