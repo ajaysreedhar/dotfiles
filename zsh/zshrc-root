@@ -10,7 +10,7 @@ bindkey -v
 # End of lines copied from /home/ajay/.zshrc
 
 # Modify command prompt style.
-PROMPT="%F{231}%K{166}[%n]%k%K{130} %7~ %k%B%K{124} # %k%b%f "
+PROMPT="%F{red}[%n]%f%F{221}:%f%F{208}[%7~]%f %F{196}❯%f "
 
 # Alias 'ls' command to use color palette.
 alias ls="ls --color=auto"
