@@ -15,7 +15,7 @@ compinit
 # Author - Ajay Sreedhar
 
 # Modify command prompt style.
-PROMPT="%F{084}[%n]%f%F{147}:%f%F{081}[%7~]%f %F{147}❯%f "
+PROMPT="%F{084}[%n]%f%F{147}:%f%F{081}[%5~]%f %F{147}❯%f "
 
 # Command alias list.
 alias ls='ls --color=auto --group-directories-first'
