@@ -13,5 +13,5 @@
 
 ## Wallpaper
 
-[Click Here](https://wallhere.com/en/wallpaper/2226394) to download wallpaper.
+[Click Here](https://www.peakpx.com/en/hd-wallpaper-desktop-kgpzp) to download wallpaper.
 
