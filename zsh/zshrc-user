@@ -21,6 +21,7 @@ PROMPT="%F{084}[%n]%f%F{147}:%f%F{081}[%5~]%f %F{147}❯%f "
 alias ls='ls --color=auto --group-directories-first'
 alias lsgrep='ls -alh | grep -i'
 alias gedit='gnome-text-editor'
+alias ffetch='fastfetch'
 
 # Package manager alias list.
 alias fpx-install='flatpak --installation=extras install flathub'
