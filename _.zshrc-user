@@ -25,4 +25,3 @@ alias ffetch='fastfetch'
 
 # Package manager alias list.
 alias flatpax='flatpak --installation=extras'
-
