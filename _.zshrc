@@ -22,7 +22,7 @@ PROMPT="%F{084}[%n]%f%F{147}:%f%F{081}[%5~]%f %F{147}❯%f "
 
 # Command alias list.
 alias ll='ls --color=auto --time=birth --group-directories-first -Alh'
-alias lg='ls --color=auto --time=birth --group-directories-first -Alh | grep -i'
+alias lk='ls --color=auto --time=birth --group-directories-first -Alh | grep -i'
 alias gedit='gnome-text-editor'
 alias ffetch='fastfetch'
 
