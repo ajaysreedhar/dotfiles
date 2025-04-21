@@ -1,0 +1,39 @@
+{
+    "auto_update": false,
+    "autosave": "off",
+    "base_keymap": "None",
+    "buffer_font_family": "Zed Plex Mono",
+    "buffer_font_size": 16,
+    "buffer_line_height": {
+        "custom": 1.5
+    },
+    "languages": {
+        "C": {
+            "tab_size": 4
+        },
+        "HTML": {
+            "tab_size": 4,
+            "format_on_save": "off"
+        },
+        "CSS": {
+            "tab_size": 4,
+            "format_on_save": "off"
+        },
+        "JavaScript": {
+            "tab_size": 4,
+            "format_on_save": "off"
+        },
+        "SQL": {
+            "format_on_save": "off"
+        }
+    },
+    "preferred_line_length": 120,
+    "show_whitespaces": "selection",
+    "tab_size": 4,
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+    "theme": "Workstation Zed",
+    "ui_font_size": 16
+}
