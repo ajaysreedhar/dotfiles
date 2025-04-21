@@ -17,6 +17,9 @@ compinit
 # Modify command prompt style.
 PROMPT="%F{084}[%n]%f%F{147}:%f%F{081}[%5~]%f %F{147}❯%f "
 
+# Use this style for root user.
+#PROMPT="%F{red}[%n]%f%F{221}:%f%F{208}[%5~]%f %F{196}❯%f "
+
 # Command alias list.
 alias ll='ls --color=auto --time=birth --group-directories-first -Alh'
 alias lgrep='ll | grep -i'
