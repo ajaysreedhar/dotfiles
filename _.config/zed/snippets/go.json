@@ -1,0 +1,40 @@
+{
+    "GeneralFuncDocComment": {
+        "prefix": "godoc",
+        "body": [
+            "// ${1:FunctionName} ${2:summary}.",
+            "//",
+            "// Parameters:",
+            "//   - ${3:ctx} - ${4:The context}.",
+            "//   - ${5:param2} - ${6:description}.",
+            "//",
+            "// Returns:",
+            "//   - ${7:return1} - ${8:description}.",
+            "//   - error - A non-nil error on failure, nil on success.",
+            "$0"
+        ],
+        "description": "Generic Function"
+    },
+    "HandlerFuncDocComment": {
+        "prefix": "godoc",
+        "body": [
+            "// ${1:FunctionName} ${2:receives requests}.",
+            "//",
+            "// Parameters:",
+            "//   - rw - Response writer associated with the request.",
+            "//   - rq - Carries the request received by the server.",
+            "$0"
+        ],
+        "description": "HTTP Handler"
+    },
+    "BlockDocComment": {
+        "prefix": "godoc",
+        "body": [
+            "// []========================================================[]",
+            "// || ${1:SectionTitle}                                      ||",
+            "// []========================================================[]",
+            "$0"
+        ],
+        "description": "Section Header"
+    }
+}
