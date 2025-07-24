@@ -2,20 +2,33 @@
     "auto_update": false,
     "autosave": "off",
     "base_keymap": "None",
-    "buffer_font_family": "Zed Plex Mono",
+    "buffer_font_family": "JetBrainsMonoNL Nerd Font",
     "buffer_font_size": 16,
     "buffer_line_height": {
         "custom": 1.5
+    },
+    "git_panel": {
+        "button": true,
+        "default_width": 480,
+        "dock": "right",
+        "fallback_branch_name": "main",
+        "scrollbar": {
+            "show": null
+        },
+        "status_style": "icon"
     },
     "languages": {
         "C": {
             "tab_size": 4
         },
-        "HTML": {
+        "CSS": {
             "tab_size": 4,
             "format_on_save": "off"
         },
-        "CSS": {
+        "Go": {
+            "tab_size": 4
+        },
+        "HTML": {
             "tab_size": 4,
             "format_on_save": "off"
         },
@@ -34,6 +47,6 @@
         "diagnostics": false,
         "metrics": false
     },
-    "theme": "Workstation Zed",
+    "theme": "Charcoal Default",
     "ui_font_size": 16
 }

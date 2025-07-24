@@ -41,7 +41,9 @@
             "ctrl-z": "editor::Undo",
             "ctrl-shift-z": "editor::Redo",
             "ctrl-shift-space": "editor::Format",
-            "shift-f6": "editor::Rename"
+            "f12": "pane::SplitVertical",
+            "shift-f6": "editor::Rename",
+            "alt-enter": "editor::GoToDefinition"
         }
     },
     {
@@ -84,6 +86,12 @@
         }
     },
     {
+        "context": "Editor && !agent_diff",
+        "bindings": {
+            "ctrl-alt-a": "git::StageFile"
+        }
+    },
+    {
         "context": "BufferSearchBar",
         "bindings": {
             "escape": "buffer_search::Dismiss",
@@ -106,8 +114,24 @@
         }
     },
     {
+        "context": "ProjectPanel",
+        "bindings": {
+            "left": "project_panel::CollapseSelectedEntry",
+            "right": "project_panel::ExpandSelectedEntry",
+            "escape": "menu::Cancel"
+        }
+    },
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "enter": "project_panel::Open"
+        }
+    },
+    {
         "context": "Pane",
         "bindings": {
+            "ctrl-tab": "pane::ActivateNextItem",
+            "ctrl-shift-tab": "pane::ActivatePreviousItem",
             "ctrl-w": "pane::CloseActiveItem",
             "ctrl-shift-f": "project_search::ToggleFocus"
         }
@@ -141,14 +165,60 @@
             "ctrl-s": "workspace::Save",
             "ctrl-p": "file_finder::Toggle",
             "ctrl-shift-p": "command_palette::Toggle",
-            "ctrl-tab": "tab_switcher::Toggle",
-            "ctrl-shift-tab": ["tab_switcher::Toggle", { "select_last": true }],
             "ctrl-shift-f": "pane::DeploySearch",
             "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }],
             "f5": "workspace::NewTerminal",
             "f8": "git_panel::ToggleFocus",
             "f9": "workspace::ToggleLeftDock",
-            "f10": "workspace::ToggleRightDock"
+            "f10": "workspace::ToggleRightDock",
+            "alt-left": "workspace::ActivatePaneLeft",
+            "alt-right": "workspace::ActivatePaneRight"
+        }
+    },
+    {
+        "context": "GitPanel && ChangesList",
+        "bindings": {
+            "escape": "git_panel::ToggleFocus",
+            "ctrl-enter": "git::Commit",
+            "space": "git::ToggleStaged",
+            "tab": "git_panel::FocusEditor"
+        }
+    },
+    {
+        "context": "GitPanel && CommitEditor",
+        "use_key_equivalents": true
+    },
+    {
+        "context": "GitCommit > Editor",
+        "bindings": {
+            "escape": "menu::Cancel",
+            "enter": "editor::Newline",
+            "ctrl-enter": "git::Commit",
+            "alt-l": "git::GenerateCommitMessage"
+        }
+    },
+    {
+        "context": "GitDiff > Editor",
+        "bindings": {
+            "ctrl-enter": "git::Commit",
+            "ctrl-space": "git::StageAll",
+            "ctrl-shift-space": "git::UnstageAll"
+        }
+    },
+    {
+        "context": "GitPanel > Editor",
+        "bindings": {
+            "escape": "git_panel::FocusChanges",
+            "tab": "git_panel::FocusChanges",
+            "shift-tab": "git_panel::FocusChanges",
+            "enter": "editor::Newline",
+            "ctrl-enter": "git::Commit"
+        }
+    },
+    {
+        "context": "FileFinder || (FileFinder > Picker > Editor)",
+        "bindings": {
+            "ctrl-p": "file_finder::Toggle"
         }
     }
 ]
