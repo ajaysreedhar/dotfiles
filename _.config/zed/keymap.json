@@ -1,224 +1,224 @@
 [
-    {
-        "bindings": {
-            "enter": "menu::Confirm",
-            "escape": "menu::Cancel",
-            "up": "menu::SelectPrevious",
-            "down": "menu::SelectNext",
-            "ctrl-q": "zed::Quit",
-            "f1": "zed::OpenSettings",
-            "f2": "zed::OpenKeymap",
-            "f4": "theme_selector::Toggle",
-            "f11": "zed::ToggleFullScreen"
-        }
-    },
-    {
-        "context": "Editor",
-        "bindings": {
-            "escape": "editor::Cancel",
-            "backspace": "editor::Backspace",
-            "pageup": "editor::PageUp",
-            "pagedown": "editor::PageDown",
-            "tab": "editor::Tab",
-            "shift-tab": "editor::Backtab",
-            "up": "editor::MoveUp",
-            "shift-up": "editor::SelectUp",
-            "down": "editor::MoveDown",
-            "shift-down": "editor::SelectDown",
-            "left": "editor::MoveLeft",
-            "shift-left": "editor::SelectLeft",
-            "right": "editor::MoveRight",
-            "shift-right": "editor::SelectRight",
-            "home": "editor::MoveToBeginningOfLine",
-            "shift-home": ["editor::SelectToBeginningOfLine", { "stop_at_soft_wraps": true }],
-            "end": "editor::MoveToEndOfLine",
-            "shift-end": ["editor::SelectToEndOfLine", { "stop_at_soft_wraps": true }],
-            "delete": "editor::Delete",
-            "ctrl-a": "editor::SelectAll",
-            "ctrl-x": "editor::Cut",
-            "ctrl-c": "editor::Copy",
-            "ctrl-v": "editor::Paste",
-            "ctrl-z": "editor::Undo",
-            "ctrl-shift-z": "editor::Redo",
-            "ctrl-shift-space": "editor::Format",
-            "f12": "pane::SplitVertical",
-            "shift-f6": "editor::Rename",
-            "alt-enter": "editor::GoToDefinition"
-        }
-    },
-    {
-        "context": "Editor && renaming",
-        "bindings": {
-            "enter": "editor::ConfirmRename"
-        }
-    },
-    {
-        "context": "Editor && mode == full",
-        "bindings": {
-            "enter": "editor::Newline",
-            "shift-enter": "editor::Newline",
-            "ctrl-shift-enter": "editor::NewlineBelow",
-            "ctrl-enter": "editor::NewlineAbove",
-            "ctrl-f": "buffer_search::Deploy",
-            "ctrl-h": ["buffer_search::Deploy", { "replace_enabled": true }]
-        }
-    },
-    {
-        "context": "Editor && showing_completions",
-        "bindings": {
-            "enter": "editor::ConfirmCompletion",
-            "tab": "editor::ConfirmCompletion"
-        }
-    },
-    {
-        "context": "Editor && (showing_code_actions || showing_completions)",
-        "bindings": {
-            "up": "editor::ContextMenuPrevious",
-            "down": "editor::ContextMenuNext",
-            "pageup": "editor::ContextMenuFirst",
-            "pagedown": "editor::ContextMenuLast"
-        }
-    },
-    {
-        "context": "Editor && showing_code_actions",
-        "bindings": {
-            "enter": "editor::ConfirmCodeAction"
-        }
-    },
-    {
-        "context": "Editor && !agent_diff",
-        "bindings": {
-            "ctrl-alt-a": "git::StageFile"
-        }
-    },
-    {
-        "context": "BufferSearchBar",
-        "bindings": {
-            "escape": "buffer_search::Dismiss",
-            "tab": "buffer_search::FocusEditor",
-            "enter": "search::SelectNextMatch",
-            "shift-enter": "search::SelectPreviousMatch",
-            "alt-enter": "search::SelectAllMatches",
-            "ctrl-f": "search::FocusSearch",
-            "ctrl-h": "search::ToggleReplace"
-        }
-    },
-    {
-        "context": "ProjectSearchBar",
-        "bindings": {
-            "escape": "project_search::ToggleFocus",
-            "ctrl-shift-f": "search::FocusSearch",
-            "ctrl-shift-h": "search::ToggleReplace",
-            "alt-ctrl-g": "search::ToggleRegex",
-            "alt-ctrl-x": "search::ToggleRegex"
-        }
-    },
-    {
-        "context": "ProjectPanel",
-        "bindings": {
-            "left": "project_panel::CollapseSelectedEntry",
-            "right": "project_panel::ExpandSelectedEntry",
-            "escape": "menu::Cancel"
-        }
-    },
-    {
-        "context": "ProjectPanel && not_editing",
-        "bindings": {
-            "enter": "project_panel::Open"
-        }
-    },
-    {
-        "context": "Pane",
-        "bindings": {
-            "ctrl-tab": "pane::ActivateNextItem",
-            "ctrl-shift-tab": "pane::ActivatePreviousItem",
-            "ctrl-w": "pane::CloseActiveItem",
-            "ctrl-shift-f": "project_search::ToggleFocus"
-        }
-    },
-    {
-        "context": "TabSwitcher",
-        "bindings": {
-            "ctrl-up": "menu::SelectPrevious",
-            "ctrl-down": "menu::SelectNext",
-            "ctrl-shift-tab": "menu::SelectPrevious",
-            "ctrl-backspace": "tab_switcher::CloseSelectedItem"
-        }
-    },
-    {
-        "context": "Terminal",
-        "bindings": {
-            "enter": ["terminal::SendKeystroke", "enter"],
-            "up": ["terminal::SendKeystroke", "up"],
-            "down": ["terminal::SendKeystroke", "down"],
-            "pageup": ["terminal::SendKeystroke", "pageup"],
-            "pagedown": ["terminal::SendKeystroke", "pagedown"],
-            "escape": ["terminal::SendKeystroke", "escape"],
-            "ctrl-c": ["terminal::SendKeystroke", "ctrl-c"],
-            "ctrl-shift-c": "terminal::Copy",
-            "ctrl-shift-v": "terminal::Paste"
-        }
-    },
-    {
-        "context": "Workspace",
-        "bindings": {
-            "ctrl-s": "workspace::Save",
-            "ctrl-p": "file_finder::Toggle",
-            "ctrl-shift-p": "command_palette::Toggle",
-            "ctrl-shift-f": "pane::DeploySearch",
-            "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }],
-            "f5": "workspace::NewTerminal",
-            "f8": "git_panel::ToggleFocus",
-            "f9": "workspace::ToggleLeftDock",
-            "f10": "workspace::ToggleRightDock",
-            "alt-left": "workspace::ActivatePaneLeft",
-            "alt-right": "workspace::ActivatePaneRight"
-        }
-    },
-    {
-        "context": "GitPanel && ChangesList",
-        "bindings": {
-            "escape": "git_panel::ToggleFocus",
-            "ctrl-enter": "git::Commit",
-            "space": "git::ToggleStaged",
-            "tab": "git_panel::FocusEditor"
-        }
-    },
-    {
-        "context": "GitPanel && CommitEditor",
-        "use_key_equivalents": true
-    },
-    {
-        "context": "GitCommit > Editor",
-        "bindings": {
-            "escape": "menu::Cancel",
-            "enter": "editor::Newline",
-            "ctrl-enter": "git::Commit",
-            "alt-l": "git::GenerateCommitMessage"
-        }
-    },
-    {
-        "context": "GitDiff > Editor",
-        "bindings": {
-            "ctrl-enter": "git::Commit",
-            "ctrl-space": "git::StageAll",
-            "ctrl-shift-space": "git::UnstageAll"
-        }
-    },
-    {
-        "context": "GitPanel > Editor",
-        "bindings": {
-            "escape": "git_panel::FocusChanges",
-            "tab": "git_panel::FocusChanges",
-            "shift-tab": "git_panel::FocusChanges",
-            "enter": "editor::Newline",
-            "ctrl-enter": "git::Commit"
-        }
-    },
-    {
-        "context": "FileFinder || (FileFinder > Picker > Editor)",
-        "bindings": {
-            "ctrl-p": "file_finder::Toggle"
-        }
+  {
+    "bindings": {
+      "enter": "menu::Confirm",
+      "escape": "menu::Cancel",
+      "up": "menu::SelectPrevious",
+      "down": "menu::SelectNext",
+      "ctrl-q": "zed::Quit",
+      "f1": "zed::OpenSettings",
+      "f2": "zed::OpenKeymap",
+      "f4": "theme_selector::Toggle",
+      "f11": "zed::ToggleFullScreen"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "escape": "editor::Cancel",
+      "backspace": "editor::Backspace",
+      "pageup": "editor::PageUp",
+      "pagedown": "editor::PageDown",
+      "tab": "editor::Tab",
+      "shift-tab": "editor::Backtab",
+      "up": "editor::MoveUp",
+      "shift-up": "editor::SelectUp",
+      "down": "editor::MoveDown",
+      "shift-down": "editor::SelectDown",
+      "left": "editor::MoveLeft",
+      "shift-left": "editor::SelectLeft",
+      "right": "editor::MoveRight",
+      "shift-right": "editor::SelectRight",
+      "home": "editor::MoveToBeginningOfLine",
+      "shift-home": ["editor::SelectToBeginningOfLine", { "stop_at_soft_wraps": true }],
+      "end": "editor::MoveToEndOfLine",
+      "shift-end": ["editor::SelectToEndOfLine", { "stop_at_soft_wraps": true }],
+      "delete": "editor::Delete",
+      "ctrl-a": "editor::SelectAll",
+      "ctrl-x": "editor::Cut",
+      "ctrl-c": "editor::Copy",
+      "ctrl-v": "editor::Paste",
+      "ctrl-z": "editor::Undo",
+      "ctrl-shift-z": "editor::Redo",
+      "ctrl-shift-space": "editor::Format",
+      "f12": "pane::SplitVertical",
+      "shift-f6": "editor::Rename",
+      "alt-enter": "editor::GoToDefinition"
+    }
+  },
+  {
+    "context": "Editor && renaming",
+    "bindings": {
+      "enter": "editor::ConfirmRename"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "enter": "editor::Newline",
+      "shift-enter": "editor::Newline",
+      "ctrl-shift-enter": "editor::NewlineBelow",
+      "ctrl-enter": "editor::NewlineAbove",
+      "ctrl-f": "buffer_search::Deploy",
+      "ctrl-h": ["buffer_search::Deploy", { "replace_enabled": true }]
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "enter": "editor::ConfirmCompletion",
+      "tab": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "up": "editor::ContextMenuPrevious",
+      "down": "editor::ContextMenuNext",
+      "pageup": "editor::ContextMenuFirst",
+      "pagedown": "editor::ContextMenuLast"
+    }
+  },
+  {
+    "context": "Editor && showing_code_actions",
+    "bindings": {
+      "enter": "editor::ConfirmCodeAction"
+    }
+  },
+  {
+    "context": "Editor && !agent_diff",
+    "bindings": {
+      "ctrl-alt-a": "git::StageFile"
+    }
+  },
+  {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "escape": "buffer_search::Dismiss",
+      "tab": "buffer_search::FocusEditor",
+      "enter": "search::SelectNextMatch",
+      "shift-enter": "search::SelectPreviousMatch",
+      "alt-enter": "search::SelectAllMatches",
+      "ctrl-f": "search::FocusSearch",
+      "ctrl-h": "search::ToggleReplace"
+    }
+  },
+  {
+    "context": "ProjectSearchBar",
+    "bindings": {
+      "escape": "project_search::ToggleFocus",
+      "ctrl-shift-f": "search::FocusSearch",
+      "ctrl-shift-h": "search::ToggleReplace",
+      "alt-ctrl-g": "search::ToggleRegex",
+      "alt-ctrl-x": "search::ToggleRegex"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "left": "project_panel::CollapseSelectedEntry",
+      "right": "project_panel::ExpandSelectedEntry",
+      "escape": "menu::Cancel"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "enter": "project_panel::Open"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem",
+      "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-shift-f": "project_search::ToggleFocus"
+    }
+  },
+  {
+    "context": "TabSwitcher",
+    "bindings": {
+      "ctrl-up": "menu::SelectPrevious",
+      "ctrl-down": "menu::SelectNext",
+      "ctrl-shift-tab": "menu::SelectPrevious",
+      "ctrl-backspace": "tab_switcher::CloseSelectedItem"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "enter": ["terminal::SendKeystroke", "enter"],
+      "up": ["terminal::SendKeystroke", "up"],
+      "down": ["terminal::SendKeystroke", "down"],
+      "pageup": ["terminal::SendKeystroke", "pageup"],
+      "pagedown": ["terminal::SendKeystroke", "pagedown"],
+      "escape": ["terminal::SendKeystroke", "escape"],
+      "ctrl-c": ["terminal::SendKeystroke", "ctrl-c"],
+      "ctrl-shift-c": "terminal::Copy",
+      "ctrl-shift-v": "terminal::Paste"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-s": "workspace::Save",
+      "ctrl-p": "file_finder::Toggle",
+      "ctrl-shift-p": "command_palette::Toggle",
+      "ctrl-shift-f": "pane::DeploySearch",
+      "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }],
+      "f5": "workspace::NewTerminal",
+      "f8": "git_panel::ToggleFocus",
+      "f9": "workspace::ToggleLeftDock",
+      "f10": "workspace::ToggleRightDock",
+      "alt-left": "workspace::ActivatePaneLeft",
+      "alt-right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "GitPanel && ChangesList",
+    "bindings": {
+      "escape": "git_panel::ToggleFocus",
+      "ctrl-enter": "git::Commit",
+      "space": "git::ToggleStaged",
+      "tab": "git_panel::FocusEditor"
+    }
+  },
+  {
+    "context": "GitPanel && CommitEditor",
+    "use_key_equivalents": true
+  },
+  {
+    "context": "GitCommit > Editor",
+    "bindings": {
+      "escape": "menu::Cancel",
+      "enter": "editor::Newline",
+      "ctrl-enter": "git::Commit",
+      "alt-l": "git::GenerateCommitMessage"
+    }
+  },
+  {
+    "context": "GitDiff > Editor",
+    "bindings": {
+      "ctrl-enter": "git::Commit",
+      "ctrl-space": "git::StageAll",
+      "ctrl-shift-space": "git::UnstageAll"
+    }
+  },
+  {
+    "context": "GitPanel > Editor",
+    "bindings": {
+      "escape": "git_panel::FocusChanges",
+      "tab": "git_panel::FocusChanges",
+      "shift-tab": "git_panel::FocusChanges",
+      "enter": "editor::Newline",
+      "ctrl-enter": "git::Commit"
+    }
+  },
+  {
+    "context": "FileFinder || (FileFinder > Picker > Editor)",
+    "bindings": {
+      "ctrl-p": "file_finder::Toggle"
+    }
+  }
 ]

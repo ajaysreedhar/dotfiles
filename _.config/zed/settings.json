@@ -1,52 +1,66 @@
 {
-    "auto_update": false,
-    "autosave": "off",
-    "base_keymap": "None",
-    "buffer_font_family": "JetBrainsMonoNL Nerd Font",
-    "buffer_font_size": 16,
-    "buffer_line_height": {
-        "custom": 1.5
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "auto_update": false,
+  "autosave": "off",
+  "base_keymap": "None",
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font",
+  "buffer_font_size": 16,
+  "buffer_line_height": {
+    "custom": 1.5
+  },
+  "git_panel": {
+    "button": true,
+    "default_width": 480,
+    "dock": "right",
+    "fallback_branch_name": "main",
+    "scrollbar": {
+      "show": null
     },
-    "git_panel": {
-        "button": true,
-        "default_width": 480,
-        "dock": "right",
-        "fallback_branch_name": "main",
-        "scrollbar": {
-            "show": null
-        },
-        "status_style": "icon"
+    "status_style": "icon"
+  },
+  "languages": {
+    "C": {
+      "tab_size": 4
     },
-    "languages": {
-        "C": {
-            "tab_size": 4
-        },
-        "CSS": {
-            "tab_size": 4,
-            "format_on_save": "off"
-        },
-        "Go": {
-            "tab_size": 4
-        },
-        "HTML": {
-            "tab_size": 4,
-            "format_on_save": "off"
-        },
-        "JavaScript": {
-            "tab_size": 4,
-            "format_on_save": "off"
-        },
-        "SQL": {
-            "format_on_save": "off"
-        }
+    "CSS": {
+      "tab_size": 2,
+      "format_on_save": "on"
     },
-    "preferred_line_length": 120,
-    "show_whitespaces": "selection",
-    "tab_size": 4,
-    "telemetry": {
-        "diagnostics": false,
-        "metrics": false
+    "Go": {
+      "tab_size": 4
     },
-    "theme": "Charcoal Default",
-    "ui_font_size": 16
+    "JavaScript": {
+      "tab_size": 2,
+      "format_on_save": "off"
+    },
+    "JSON": {
+      "tab_size": 2,
+      "format_on_save": "on"
+    },
+    "JSONC": {
+      "tab_size": 2,
+      "format_on_save": "on"
+    },
+    "TypeScript": {
+      "tab_size": 2,
+      "format_on_save": "on"
+    }
+  },
+  "preferred_line_length": 120,
+  "show_whitespaces": "selection",
+  "tab_size": 4,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "Charcoal Default",
+    "dark": "Charcoal Default"
+  },
+  "ui_font_size": 16
 }
