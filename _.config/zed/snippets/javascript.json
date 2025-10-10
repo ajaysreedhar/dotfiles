@@ -1,0 +1,15 @@
+{
+    "JSHeaderComment": {
+        "prefix": "jsdoc",
+        "body": [
+            "/* --------------------------------------------------------- *",
+            " | Copyright (c) ${1:year} ${2:company}. All rights reserved.",
+            " |",
+            " | File: ${3:filename}.ts",
+            " | Desc: ${4:description}",
+            " * --------------------------------------------------------- */",
+            "$0"
+        ],
+        "description": "File Header"
+    }
+}
