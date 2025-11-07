@@ -1,17 +1,17 @@
 {
-  "icon_theme": {
-    "mode": "dark",
-    "light": "Zed (Default)",
-    "dark": "Zed (Default)"
-  },
   "auto_update": false,
   "autosave": "off",
   "base_keymap": "None",
+  "buffer_font_size": 15,
   "buffer_font_family": "JetBrainsMonoNL Nerd Font",
-  "buffer_font_size": 16,
+  "buffer_font_features": {
+    "calt": 0
+  },
   "buffer_line_height": {
     "custom": 1.5
   },
+  "disable_ai": true,
+  "format_on_save": "on",
   "git_panel": {
     "button": true,
     "default_width": 480,
@@ -22,6 +22,7 @@
     },
     "status_style": "icon"
   },
+  "icon_theme": "Zed (Default)",
   "languages": {
     "C": {
       "tab_size": 4
@@ -50,6 +51,9 @@
       "format_on_save": "on"
     }
   },
+  "minimap": {
+    "show": "auto"
+  },
   "preferred_line_length": 120,
   "show_whitespaces": "selection",
   "tab_size": 4,
@@ -58,8 +62,8 @@
     "metrics": false
   },
   "theme": {
-    "mode": "dark",
-    "light": "Charcoal Default",
+    "mode": "system",
+    "light": "One Light",
     "dark": "Charcoal Default"
   },
   "ui_font_size": 16

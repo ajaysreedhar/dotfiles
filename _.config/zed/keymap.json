@@ -156,7 +156,8 @@
       "escape": ["terminal::SendKeystroke", "escape"],
       "ctrl-c": ["terminal::SendKeystroke", "ctrl-c"],
       "ctrl-shift-c": "terminal::Copy",
-      "ctrl-shift-v": "terminal::Paste"
+      "ctrl-shift-v": "terminal::Paste",
+      "ctrl-shift-t": "workspace::NewTerminal"
     }
   },
   {
@@ -167,7 +168,7 @@
       "ctrl-shift-p": "command_palette::Toggle",
       "ctrl-shift-f": "pane::DeploySearch",
       "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }],
-      "f5": "workspace::NewTerminal",
+      "f5": "terminal_panel::Toggle",
       "f8": "git_panel::ToggleFocus",
       "f9": "workspace::ToggleLeftDock",
       "f10": "workspace::ToggleRightDock",
