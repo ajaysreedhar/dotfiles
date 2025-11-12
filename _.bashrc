@@ -1,21 +1,31 @@
-# .bashrc
+# ~/.bashrc
+# -------------------------------------------------------------
+# Bash configuration for NON-LOGIN interactive shells only.
+#
+# This file contains terminal-emulator-specific customizations
+# like fancy PS1 prompts, colors, and features that only makes 
+# sense inside a visual or interactive terminal.
+#
+# It sources ~/.bash_profile to ensure that all universal setup
+# (aliases, completions) are available in non-login shells too.
+# -------------------------------------------------------------
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
+# If not running interactively, don't do anything.
+# -------------------------------------------------------------
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# Source .bash_profile if available.
+# -------------------------------------------------------------
+if [ -f "${HOME}/.bash_profile" ]; then
+    . "${HOME}/.bash_profile"
 fi
 
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
-
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# Setting prompts
-# --------- Define Colors (256-color) ----------
+# PS1 format for interactive non-login shells.
+# Nerd fonts are required to render the symbols correctly.
+# -------------------------------------------------------------
 declare -A prompt_color
 declare -A prompt_crumb
 
@@ -47,18 +57,8 @@ PS1="${prompt_crumb[host_info]}${prompt_crumb[directory]}${prompt_crumb[timestam
 unset prompt_color
 unset prompt_crumb
 
-# Declare command aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    
-    alias ll='ls --color=auto --time=birth --group-directories-first -Alh'
-    alias lk='ls --color=auto --time=birth --group-directories-first -Alh | grep -i'
-fi
-
+# Command line aliases for graphical applications.
+# -------------------------------------------------------------
 alias gedit='gnome-text-editor'
 alias flatpax='flatpak --installation=extras'
-
-if command -v fastfetch &>/dev/null; then
-    alias ffetch='fastfetch'
-fi
 
