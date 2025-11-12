@@ -29,8 +29,6 @@ fi
 declare -A prompt_color
 declare -A prompt_crumb
 
-# Initialize last_directory once
-
 prompt_color[host_fg]='\[\e[38;2;200;220;245m\]'
 prompt_color[host_bg]='\[\e[48;2;50;62;93m\]'
 prompt_color[host_ic]='\[\e[38;2;50;62;93m\]'
@@ -47,10 +45,17 @@ prompt_color[alt_fg]='\[\e[38;2;139;203;90m\]'
 prompt_color[alt_bg]='\[\e[48;2;36;45;60m\]'
 prompt_color[reset]='\[\e[0m\]'
 
-prompt_crumb[host_info]="${prompt_color[host_bg]}${prompt_color[host_fg]} \u@\h ${prompt_color[reset]}${prompt_color[host_ic]}${prompt_color[reset]}"
-prompt_crumb[directory]="${prompt_color[dir_ic]}${prompt_color[dir_bg]}${prompt_color[dir_fg]} 🖿 \w ${prompt_color[reset]}${prompt_color[dir_ic]}${prompt_color[reset]}"
-prompt_crumb[timestamp]="${prompt_color[time_ic]}${prompt_color[time_bg]}${prompt_color[time_fg]} 󱫑 \A ${prompt_color[reset]}${prompt_color[time_ic]}${prompt_color[reset]}"
-prompt_crumb[text_area]="${prompt_color[alt_fg]} ${prompt_color[reset]}"
+if [[ ${TERM} == 'xterm-256color' ]]; then
+    prompt_crumb[host_info]="${prompt_color[host_bg]}${prompt_color[host_fg]} \u@\h ${prompt_color[reset]}"
+    prompt_crumb[directory]="${prompt_color[dir_bg]}${prompt_color[dir_fg]} 🖿 \w ${prompt_color[reset]}"
+    prompt_crumb[timestamp]="${prompt_color[time_bg]}${prompt_color[time_fg]} 󱫑 \A ${prompt_color[reset]}"
+    prompt_crumb[text_area]="${prompt_color[alt_fg]} ${prompt_color[reset]}"
+else
+    prompt_crumb[host_info]="${prompt_color[host_bg]}${prompt_color[host_fg]} \u@\h ${prompt_color[reset]}${prompt_color[host_ic]}${prompt_color[reset]}"
+    prompt_crumb[directory]="${prompt_color[dir_ic]}${prompt_color[dir_bg]}${prompt_color[dir_fg]} 🖿 \w ${prompt_color[reset]}${prompt_color[dir_ic]}${prompt_color[reset]}"
+    prompt_crumb[timestamp]="${prompt_color[time_ic]}${prompt_color[time_bg]}${prompt_color[time_fg]} 󱫑 \A ${prompt_color[reset]}${prompt_color[time_ic]}${prompt_color[reset]}"
+    prompt_crumb[text_area]="${prompt_color[alt_fg]} ${prompt_color[reset]}"
+fi
 
 PS1="${prompt_crumb[host_info]}${prompt_crumb[directory]}${prompt_crumb[timestamp]}\n${prompt_crumb[text_area]}"
 
