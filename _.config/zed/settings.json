@@ -2,7 +2,7 @@
   "auto_update": false,
   "autosave": "off",
   "base_keymap": "None",
-  "buffer_font_size": 15,
+  "buffer_font_size": 16,
   "buffer_font_family": "JetBrainsMonoNL Nerd Font",
   "buffer_font_features": {
     "calt": 0
@@ -57,6 +57,11 @@
   "preferred_line_length": 120,
   "show_whitespaces": "selection",
   "tab_size": 4,
+  "terminal": {
+    "font_family": "JetBrainsMonoNL Nerd Font",
+    "font_size": 16,
+    "line_height": "standard"
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
