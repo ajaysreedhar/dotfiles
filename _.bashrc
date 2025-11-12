@@ -46,10 +46,10 @@ prompt_color[alt_bg]='\[\e[48;2;36;45;60m\]'
 prompt_color[reset]='\[\e[0m\]'
 
 if [[ ${TERM} == 'xterm-256color' ]]; then
-    prompt_crumb[host_info]="${prompt_color[host_bg]}${prompt_color[host_fg]} \u@\h ${prompt_color[reset]}"
-    prompt_crumb[directory]="${prompt_color[dir_bg]}${prompt_color[dir_fg]} 🖿 \w ${prompt_color[reset]}"
-    prompt_crumb[timestamp]="${prompt_color[time_bg]}${prompt_color[time_fg]} 󱫑 \A ${prompt_color[reset]}"
-    prompt_crumb[text_area]="${prompt_color[alt_fg]} ${prompt_color[reset]}"
+    prompt_crumb[host_info]="\[\e[38;5;41m\][\u@\h]${prompt_color[reset]}"
+    prompt_crumb[directory]=":\[\e[38;5;45m\][\w]${prompt_color[reset]}:"
+    prompt_crumb[timestamp]="\[\e[38;5;240m\][󱫑 \A]${prompt_color[reset]}"
+    prompt_crumb[text_area]="\[\e[38;5;210m\]❱ ${prompt_color[reset]}"
 else
     prompt_crumb[host_info]="${prompt_color[host_bg]}${prompt_color[host_fg]} \u@\h ${prompt_color[reset]}${prompt_color[host_ic]}${prompt_color[reset]}"
     prompt_crumb[directory]="${prompt_color[dir_ic]}${prompt_color[dir_bg]}${prompt_color[dir_fg]} 🖿 \w ${prompt_color[reset]}${prompt_color[dir_ic]}${prompt_color[reset]}"
