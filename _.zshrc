@@ -1,15 +1,18 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.zsh_history
+# ZSH configuration
+# Generated on 2025-06-08
+
+# Use vi keybindings
+bindkey -v
+
+# Keep 10000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=5000
 SAVEHIST=10000
-bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/ajay/.zshrc'
+HISTFILE=~/.zsh_history
 
+# Use modern completion system
+zstyle :compinstall filename '/home/ajay/.zshrc'
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
 # The following lines are manually added.
 # Author - Ajay Sreedhar
@@ -17,14 +20,13 @@ compinit
 # Modify command prompt style.
 PROMPT="%F{084}[%n]%f%F{147}:%f%F{081}[%5~]%f %F{147}❯%f "
 
-# Use this style for root user.
-#PROMPT="%F{red}[%n]%f%F{221}:%f%F{208}[%5~]%f %F{196}❯%f "
-
 # Command alias list.
 alias ll='ls --color=auto --time=birth --group-directories-first -Alh'
-alias lk='ls --color=auto --time=birth --group-directories-first -Alh | grep -i'
+alias lgrep='ll | grep -i'
 alias gedit='gnome-text-editor'
 alias ffetch='fastfetch'
 
 # Package manager alias list.
 alias flatpax='flatpak --installation=extras'
+alias pwy='printf %s "$(pwd)" | wl-copy'
+
